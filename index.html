@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#031A37">
+<title>Get WatchX</title>
+<style>
+:root {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:light}
+body{margin:0;min-height:100dvh;display:grid;place-items:center;background:#f4f7fb;color:#0d2440}
+main{max-width:440px;margin:24px;padding:32px 24px;text-align:center;background:white;border-radius:20px;box-shadow:0 10px 35px #0c244015}
+h1{font-size:30px;margin:8px 0}p{color:#536477;line-height:1.5}a{display:block;margin-top:12px;padding:15px 20px;border-radius:12px;text-decoration:none;font-weight:700;color:white;background:#031A37}a.secondary{background:#17815d}
+</style>
+<script>
+(function(){
+  const android = 'https://play.google.com/store/apps/details?id=com.inficare.watchx';
+  const ios = 'https://apps.apple.com/np/app/watchx/id6802517806';
+  const agent = navigator.userAgent || '';
+  // iPadOS desktop-mode user agents can report Macintosh with touch support.
+  const appleMobile = /iPhone|iPad|iPod/i.test(agent) || (/Macintosh/i.test(agent) && navigator.maxTouchPoints > 1);
+  const androidMobile = /Android/i.test(agent);
+  if(appleMobile || androidMobile){
+    location.replace(appleMobile ? ios : android);
+  }
+})();
+</script>
+</head>
+<body>
+<main>
+<h1>Get WatchX</h1>
+<p>Select your store to install the WatchX app.</p>
+<a href="https://play.google.com/store/apps/details?id=com.inficare.watchx">Get it on Google Play</a>
+<a class="secondary" href="https://apps.apple.com/np/app/watchx/id6802517806">Download on the App Store</a>
+<p><small>Android and iOS devices are redirected automatically. If nothing happens, choose your store above.</small></p>
+</main>
+</body>
+</html>
